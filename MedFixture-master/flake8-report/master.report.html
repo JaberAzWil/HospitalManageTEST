@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: master.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="master.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               master.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  60
+               </span>
+               <strong>F405:</strong> 'Menu' may be undefined, or defined from star imports: TKinter, tkinter
+               
+                  (and 12 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l24">
+                  <tt><i>24</i>         <span class="n">Chooser</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l25">
+                  <tt><i>25</i>         <span class="n">itemone</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l31">
+                  <tt><i>31</i>         <span class="bp">self</span><span class="o">.</span><span class="n">loginLabel</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Connecter vous</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 14 bold&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l35">
+                  <tt><i>35</i>         <span class="bp">self</span><span class="o">.</span><span class="n">login_id</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;LOGIN*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 12&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l39">
+                  <tt><i>39</i>         <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Mot de passe*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 12&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l43">
+                  <tt><i>43</i>         <span class="bp">self</span><span class="o">.</span><span class="n">login_id_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l46">
+                  <tt><i>46</i>         <span class="bp">self</span><span class="o">.</span><span class="n">password_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l50">
+                  <tt><i>50</i>         <span class="bp">self</span><span class="o">.</span><span class="n">reset_password</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Mot de passe oublié ?&quot;</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;#aed4eb&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">reset_pass</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'PhotoImage' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l54">
+                  <tt><i>54</i>         <span class="bp">self</span><span class="o">.</span><span class="n">loginShield</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;resources/user-shield-100.png&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l56">
+                  <tt><i>56</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Connexion&#39;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">buttonImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'LEFT' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l56">
+                  <tt><i>56</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Connexion&#39;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">buttonImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'PhotoImage' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l60">
+                  <tt><i>60</i>         <span class="bp">self</span><span class="o">.</span><span class="n">guestAvatar</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;resources/guest.png&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l62">
+                  <tt><i>62</i>         <span class="bp">self</span><span class="o">.</span><span class="n">guestButton</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Connexion en tant que invité&#39;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">190</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestLogin</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'LEFT' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l62">
+                  <tt><i>62</i>         <span class="bp">self</span><span class="o">.</span><span class="n">guestButton</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Connexion en tant que invité&#39;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">190</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestLogin</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'END' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l73">
+                  <tt><i>73</i>             <span class="bp">self</span><span class="o">.</span><span class="n">login_id_ent</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">END</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'END' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l74">
+                  <tt><i>74</i>             <span class="bp">self</span><span class="o">.</span><span class="n">password_ent</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">END</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Toplevel' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l104">
+                  <tt><i>104</i>         <span class="n">top</span> <span class="o">=</span> <span class="n">Toplevel</span><span class="p">()</span> </tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l109">
+                  <tt><i>109</i>         <span class="n">Chooser</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l110">
+                  <tt><i>110</i>         <span class="n">itemone</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l128">
+                  <tt><i>128</i>         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'RAISED' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l128">
+                  <tt><i>128</i>         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l131">
+                  <tt><i>131</i>         <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">320</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l134">
+                  <tt><i>134</i>         <span class="bp">self</span><span class="o">.</span><span class="n">footer</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>'RAISED' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l134">
+                  <tt><i>134</i>         <span class="bp">self</span><span class="o">.</span><span class="n">footer</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l138">
+                  <tt><i>138</i>         <span class="bp">self</span><span class="o">.</span><span class="n">timeLabel</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">footer</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Connecter à &quot;</span><span class="o">+</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%I:%M:%S %p&quot;</span><span class="p">),</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 10&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l143">
+                  <tt><i>143</i>         <span class="bp">self</span><span class="o">.</span><span class="n">userlogin</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Vous etes connecter en tant que:&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 12 bold&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l146">
+                  <tt><i>146</i>         <span class="bp">self</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Nom: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">db_name</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 12&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l149">
+                  <tt><i>149</i>         <span class="bp">self</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Designation: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">db_designation</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 12&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Canvas' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l213">
+                  <tt><i>213</i>             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <p>'NW' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l216">
+                  <tt><i>216</i>             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <p>'Toplevel' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l223">
+                  <tt><i>223</i>         <span class="n">about</span> <span class="o">=</span> <span class="n">Toplevel</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l228">
+                  <tt><i>228</i>         <span class="bp">self</span><span class="o">.</span><span class="n">leftAbout</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">about</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l231">
+                  <tt><i>231</i>         <span class="bp">self</span><span class="o">.</span><span class="n">rightAbout</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">about</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Canvas' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l234">
+                  <tt><i>234</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">leftAbout</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <p>'PhotoImage' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l236">
+                  <tt><i>236</i>         <span class="bp">self</span><span class="o">.</span><span class="n">img</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;resources/icon.png&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <p>'NW' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l238">
+                  <tt><i>238</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <p>'PhotoImage' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l241">
+                  <tt><i>241</i>         <span class="bp">self</span><span class="o">.</span><span class="n">photo</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;resources/github-100.png&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Canvas' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l244">
+                  <tt><i>244</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">whatWindow</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <p>'whatWindow' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l244">
+                  <tt><i>244</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">whatWindow</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <p>'PhotoImage' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l246">
+                  <tt><i>246</i>         <span class="bp">self</span><span class="o">.</span><span class="n">img</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;resources/icon.png&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <p>'NW' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l248">
+                  <tt><i>248</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <p>'Toplevel' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l253">
+                  <tt><i>253</i>         <span class="n">resetWindow</span> <span class="o">=</span> <span class="n">Toplevel</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l266">
+                  <tt><i>266</i>         <span class="bp">self</span><span class="o">.</span><span class="n">id_label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">resetWindow</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Login*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l268">
+                  <tt><i>268</i>         <span class="bp">self</span><span class="o">.</span><span class="n">id_label_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">resetWindow</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l272">
+                  <tt><i>272</i>         <span class="bp">self</span><span class="o">.</span><span class="n">ques_label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Question secrete*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l301">
+                  <tt><i>301</i>         <span class="bp">self</span><span class="o">.</span><span class="n">answer</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Votre reponse*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l304">
+                  <tt><i>304</i>         <span class="bp">self</span><span class="o">.</span><span class="n">answer_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l307">
+                  <tt><i>307</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Nouveau mot de passe*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l310">
+                  <tt><i>310</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l314">
+                  <tt><i>314</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit_answer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Soumettre&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subAnswerSecretQues</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l318">
+                  <tt><i>318</i>         <span class="bp">self</span><span class="o">.</span><span class="n">footer</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>'RAISED' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l318">
+                  <tt><i>318</i>         <span class="bp">self</span><span class="o">.</span><span class="n">footer</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l322">
+                  <tt><i>322</i>         <span class="bp">self</span><span class="o">.</span><span class="n">netStatus</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">footer</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11 bold&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l326">
+                  <tt><i>326</i>         <span class="bp">self</span><span class="o">.</span><span class="n">emailStatus</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11 bold&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l329">
+                  <tt><i>329</i>         <span class="bp">self</span><span class="o">.</span><span class="n">Sub_loginID</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Soumettre&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subVeriEmail</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l332">
+                  <tt><i>332</i>         <span class="bp">self</span><span class="o">.</span><span class="n">codeLabel</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Code de verification*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l335">
+                  <tt><i>335</i>         <span class="bp">self</span><span class="o">.</span><span class="n">codeLabel_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l338">
+                  <tt><i>338</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass_otp</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Nouveau mot de passe*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l341">
+                  <tt><i>341</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass_otp_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: TKinter, tkinter:</p>
+               
+               <a href="master.source.html#l345">
+                  <tt><i>345</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit_answer_otp</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Soumettre&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subAnswerOTP</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  2
+               </span>
+               <strong>F401:</strong> 'webbrowser' imported but unused
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'webbrowser' imported but unused:</p>
+               
+               <a href="master.source.html#l8">
+                  <tt><i>8</i> <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">webbrowser</span><span class="o">,</span> <span class="nn">time</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'email.mime.image.MIMEImage' imported but unused:</p>
+               
+               <a href="master.source.html#l13">
+                  <tt><i>13</i> <span class="kn">from</span> <span class="nn">email.mime.image</span> <span class="kn">import</span> <span class="n">MIMEImage</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  2
+               </span>
+               <strong>F403:</strong> 'from TKinter import *' used; unable to detect undefined names
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'from TKinter import *' used; unable to detect undefined names:</p>
+               
+               <a href="master.source.html#l2">
+                  <tt><i>2</i>     <span class="kn">from</span> <span class="nn">TKinter</span> <span class="kn">import</span> <span class="o">*</span>   </tt>
+               </a>
+            </li><li>
+               
+               <p>'from tkinter import *' used; unable to detect undefined names:</p>
+               
+               <a href="master.source.html#l4">
+                  <tt><i>4</i>     <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>   </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'itemone' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l25">
+                  <tt><i>25</i>         <span class="n">itemone</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  27
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l2">
+                  <tt><i>2</i>     <span class="kn">from</span> <span class="nn">TKinter</span> <span class="kn">import</span> <span class="o">*</span>   </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l4">
+                  <tt><i>4</i>     <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>   </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l104">
+                  <tt><i>104</i>         <span class="n">top</span> <span class="o">=</span> <span class="n">Toplevel</span><span class="p">()</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l105">
+                  <tt><i>105</i>         <span class="n">top</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;480x320+360+180&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l106">
+                  <tt><i>106</i>         <span class="n">top</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Welcome&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l163">
+                  <tt><i>163</i>     <span class="c1"># function to open the appointment window    </span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l170">
+                  <tt><i>170</i>     <span class="c1"># function to open the update window  </span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l177">
+                  <tt><i>177</i>     <span class="c1"># function to open the display window </span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l184">
+                  <tt><i>184</i>     <span class="c1"># function to open the display window  </span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l213">
+                  <tt><i>213</i>             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l215">
+                  <tt><i>215</i>             <span class="bp">self</span><span class="o">.</span><span class="n">img</span> <span class="o">=</span> <span class="n">ImageTk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">))</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l216">
+                  <tt><i>216</i>             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l224">
+                  <tt><i>224</i>         <span class="n">about</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;480x320+360+180&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l234">
+                  <tt><i>234</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">leftAbout</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l236">
+                  <tt><i>236</i>         <span class="bp">self</span><span class="o">.</span><span class="n">img</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;resources/icon.png&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l238">
+                  <tt><i>238</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l244">
+                  <tt><i>244</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">whatWindow</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l246">
+                  <tt><i>246</i>         <span class="bp">self</span><span class="o">.</span><span class="n">img</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;resources/icon.png&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l248">
+                  <tt><i>248</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l258">
+                  <tt><i>258</i>         <span class="n">tabControl</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="n">resetWindow</span><span class="p">)</span>        </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l259">
+                  <tt><i>259</i>         <span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">tabControl</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l260">
+                  <tt><i>260</i>         <span class="bp">self</span><span class="o">.</span><span class="n">otp</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">tabControl</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l262">
+                  <tt><i>262</i>         <span class="n">tabControl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span><span class="s1">&#39;Utiliser question secrete&#39;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l263">
+                  <tt><i>263</i>         <span class="n">tabControl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span><span class="s1">&#39;Utiliser Email&#39;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l264">
+                  <tt><i>264</i>         <span class="n">tabControl</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">expand</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l291">
+                  <tt><i>291</i>         <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l387">
+                  <tt><i>387</i>         <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">top</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Email envoyé&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;La vérification a été envoyée avec succès à votre adresse e-mail&quot;</span><span class="p">)</span>  </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  15
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="master.source.html#l54">
+                  <tt><i>54</i>         <span class="bp">self</span><span class="o">.</span><span class="n">loginShield</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;resources/user-shield-100.png&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="master.source.html#l56">
+                  <tt><i>56</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Connexion&#39;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">buttonImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="master.source.html#l60">
+                  <tt><i>60</i>         <span class="bp">self</span><span class="o">.</span><span class="n">guestAvatar</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;resources/guest.png&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="master.source.html#l241">
+                  <tt><i>241</i>         <span class="bp">self</span><span class="o">.</span><span class="n">photo</span> <span class="o">=</span> <span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;resources/github-100.png&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="master.source.html#l262">
+                  <tt><i>262</i>         <span class="n">tabControl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span><span class="s1">&#39;Utiliser question secrete&#39;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="master.source.html#l263">
+                  <tt><i>263</i>         <span class="n">tabControl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span><span class="s1">&#39;Utiliser Email&#39;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 3 places):</p>
+               
+               <a href="master.source.html#l264">
+                  <tt><i>264</i>         <span class="n">tabControl</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">expand</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="master.source.html#l311">
+                  <tt><i>311</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass_ent</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">170</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span><span class="mi">190</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="master.source.html#l342">
+                  <tt><i>342</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass_otp_ent</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">170</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span><span class="mi">190</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  14
+               </span>
+               <strong>E501:</strong> line too long (145 > 119 characters)
+               
+                  (and 13 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (145 > 119 characters):</p>
+               
+               <a href="master.source.html#l56">
+                  <tt><i>56</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Connexion&#39;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">buttonImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (154 > 119 characters):</p>
+               
+               <a href="master.source.html#l62">
+                  <tt><i>62</i>         <span class="bp">self</span><span class="o">.</span><span class="n">guestButton</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Connexion en tant que invité&#39;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">190</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestLogin</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (152 > 119 characters):</p>
+               
+               <a href="master.source.html#l84">
+                  <tt><i>84</i>                 <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Connecter avec succes&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonjour &quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">db_name</span><span class="o">+</span><span class="s2">&quot;! Vous etes connecter en tant que &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">db_designation</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (121 > 119 characters):</p>
+               
+               <a href="master.source.html#l87">
+                  <tt><i>87</i>                 <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showerror</span><span class="p">(</span><span class="s2">&quot;Connexion echouer&quot;</span><span class="p">,</span> <span class="s2">&quot;Login ou mot de passe invalide! SVP réessayer encore&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (140 > 119 characters):</p>
+               
+               <a href="master.source.html#l95">
+                  <tt><i>95</i>         <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Connexion réussie&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonjour &quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">db_name</span><span class="o">+</span><span class="s2">&quot;! vous etes connecter en tant que &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">db_designation</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (124 > 119 characters):</p>
+               
+               <a href="master.source.html#l138">
+                  <tt><i>138</i>         <span class="bp">self</span><span class="o">.</span><span class="n">timeLabel</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">footer</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Connecter à &quot;</span><span class="o">+</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%I:%M:%S %p&quot;</span><span class="p">),</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 10&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (133 > 119 characters):</p>
+               
+               <a href="master.source.html#l157">
+                  <tt><i>157</i>         <span class="n">MsgBox</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">askquestion</span><span class="p">(</span><span class="s1">&#39;Deconnexion de application&#39;</span><span class="p">,</span><span class="s1">&#39;Vous etes sur de vouloir vous deconnecter?&#39;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (144 > 119 characters):</p>
+               
+               <a href="master.source.html#l314">
+                  <tt><i>314</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit_answer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Soumettre&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subAnswerSecretQues</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (123 > 119 characters):</p>
+               
+               <a href="master.source.html#l345">
+                  <tt><i>345</i>         <span class="bp">self</span><span class="o">.</span><span class="n">submit_answer_otp</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Soumettre&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subAnswerOTP</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (150 > 119 characters):</p>
+               
+               <a href="master.source.html#l387">
+                  <tt><i>387</i>         <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">top</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Email envoyé&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;La vérification a été envoyée avec succès à votre adresse e-mail&quot;</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (143 > 119 characters):</p>
+               
+               <a href="master.source.html#l471">
+                  <tt><i>471</i> <span class="s2">            &lt;img src=&quot;https://raw.githubusercontent.com/chauhannaman98/MedFixture/master/resources/icon.png&quot; alt=&quot;Logo&quot; width=&quot;80&quot; height=&quot;80&quot;&gt;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (132 > 119 characters):</p>
+               
+               <a href="master.source.html#l478">
+                  <tt><i>478</i> <span class="s2">            &lt;p class=&quot;veri-code&quot; style=&quot;text-align: center;font-size: larger;font-family: &#39;Inconsolata&#39;, monospace;&quot;&gt;&quot;&quot;&quot;</span><span class="o">+</span> <span class="n">x</span> <span class="o">+</span><span class="s2">&quot;&quot;&quot;&lt;/p&gt;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (148 > 119 characters):</p>
+               
+               <a href="master.source.html#l482">
+                  <tt><i>482</i> <span class="s2">            &lt;li style=&quot;font-size: smaller;&quot;&gt;An open-source project maintained by &lt;a href=&quot;https://github.com/chauhannaman98&quot;&gt;chauhannaman98&lt;/a&gt;&lt;/li&gt;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (120 > 119 characters):</p>
+               
+               <a href="master.source.html#l483">
+                  <tt><i>483</i> <span class="s2">            &lt;li style=&quot;font-size: smaller;&quot;&gt;&lt;a href=&quot;https://chauhannaman98.github.io/MedFixture&quot;&gt;Visit website&lt;/a&gt;&lt;/li&gt;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l26">
+                  <tt><i>26</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l30">
+                  <tt><i>30</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l69">
+                  <tt><i>69</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l88">
+                  <tt><i>88</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l107">
+                  <tt><i>107</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l116">
+                  <tt><i>116</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l140">
+                  <tt><i>140</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l208">
+                  <tt><i>208</i>             </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l243">
+                  <tt><i>243</i>        </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l261">
+                  <tt><i>261</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l357">
+                  <tt><i>357</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l383">
+                  <tt><i>383</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l385">
+                  <tt><i>385</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l62">
+                  <tt><i>62</i>         <span class="bp">self</span><span class="o">.</span><span class="n">guestButton</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Connexion en tant que invité&#39;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestImage</span><span class="p">,</span> <span class="n">compound</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">190</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">guestLogin</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l157">
+                  <tt><i>157</i>         <span class="n">MsgBox</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">askquestion</span><span class="p">(</span><span class="s1">&#39;Deconnexion de application&#39;</span><span class="p">,</span><span class="s1">&#39;Vous etes sur de vouloir vous deconnecter?&#39;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l216">
+                  <tt><i>216</i>             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l237">
+                  <tt><i>237</i>         <span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">img</span><span class="o">.</span><span class="n">subsample</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l238">
+                  <tt><i>238</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l247">
+                  <tt><i>247</i>         <span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">img</span><span class="o">.</span><span class="n">subsample</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l248">
+                  <tt><i>248</i>         <span class="bp">self</span><span class="o">.</span><span class="n">imgCanvas</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">NW</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">img_sized</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l268">
+                  <tt><i>268</i>         <span class="bp">self</span><span class="o">.</span><span class="n">id_label_ent</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">resetWindow</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l307">
+                  <tt><i>307</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secret_ques</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Nouveau mot de passe*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l338">
+                  <tt><i>338</i>         <span class="bp">self</span><span class="o">.</span><span class="n">new_pass_otp</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Nouveau mot de passe*&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;arial 11&#39;</span><span class="p">),</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l424">
+                  <tt><i>424</i>     <span class="n">MsgBox</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">askquestion</span><span class="p">(</span><span class="s1">&#39;Quitter Application&#39;</span><span class="p">,</span><span class="s1">&#39;Voulez vous vraiment quitter?&#39;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l497">
+                  <tt><i>497</i>         <span class="n">server</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="n">password</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l19">
+                  <tt><i>19</i> <span class="k">class</span> <span class="nc">App</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l415">
+                  <tt><i>415</i> <span class="k">def</span> <span class="nf">hide_root</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l419">
+                  <tt><i>419</i> <span class="k">def</span> <span class="nf">show_root</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l423">
+                  <tt><i>423</i> <span class="k">def</span> <span class="nf">exitRoot</span><span class="p">(</span><span class="n">root</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l428">
+                  <tt><i>428</i> <span class="k">def</span> <span class="nf">updateStatusLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l441">
+                  <tt><i>441</i> <span class="k">def</span> <span class="nf">is_connected</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l451">
+                  <tt><i>451</i> <span class="k">def</span> <span class="nf">sendVeriEmail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around operator (in 2 places):</p>
+               
+               <a href="master.source.html#l70">
+                  <tt><i>70</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="master.source.html#l376">
+                  <tt><i>376</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verifyCode</span><span class="o">==</span><span class="bp">self</span><span class="o">.</span><span class="n">enteredVeriCode</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator (in 2 places):</p>
+               
+               <a href="master.source.html#l478">
+                  <tt><i>478</i> <span class="s2">            &lt;p class=&quot;veri-code&quot; style=&quot;text-align: center;font-size: larger;font-family: &#39;Inconsolata&#39;, monospace;&quot;&gt;&quot;&quot;&quot;</span><span class="o">+</span> <span class="n">x</span> <span class="o">+</span><span class="s2">&quot;&quot;&quot;&lt;/p&gt;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l135">
+                  <tt><i>135</i>             <span class="n">highlightbackground</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l277">
+                  <tt><i>277</i>         <span class="s2">&quot;Quel est le troisieme prenom de votre père?&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l278">
+                  <tt><i>278</i>         <span class="s2">&quot;Quel est votre livre favorie?&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l319">
+                  <tt><i>319</i>             <span class="n">highlightbackground</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E275">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E275:</strong> missing whitespace after keyword
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l362">
+                  <tt><i>362</i>         <span class="k">if</span><span class="p">(</span><span class="n">is_connected</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l429">
+                  <tt><i>429</i>     <span class="k">if</span><span class="p">(</span><span class="n">is_connected</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l407">
+                  <tt><i>407</i> <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l509">
+                  <tt><i>509</i> <span class="k">if</span> <span class="s1">&#39;TRAVIS&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E401">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E401:</strong> multiple imports on one line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l8">
+                  <tt><i>8</i> <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">webbrowser</span><span class="o">,</span> <span class="nn">time</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l11">
+                  <tt><i>11</i> <span class="kn">import</span> <span class="nn">smtplib</span><span class="o">,</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">string</span><span class="o">,</span> <span class="nn">socket</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E502">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E502:</strong> the backslash is redundant between brackets
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l134">
+                  <tt><i>134</i>         <span class="bp">self</span><span class="o">.</span><span class="n">footer</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="master.source.html#l318">
+                  <tt><i>318</i>         <span class="bp">self</span><span class="o">.</span><span class="n">footer</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">otp</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">bd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> \</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E124">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E124:</strong> closing bracket does not match visual indentation
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l279">
+                  <tt><i>279</i>         <span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l203">
+                  <tt><i>203</i>             <span class="bp">self</span><span class="o">.</span><span class="n">name</span>  <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="master.source.html#l98">
+                  <tt><i>98</i>     <span class="c1">#function to draw toplevel window</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>
