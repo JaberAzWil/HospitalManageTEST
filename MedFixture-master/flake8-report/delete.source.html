@@ -578,30 +578,48 @@
                </ul><tt><i>93</i>     <span class="k">def</span> <span class="nf">delete_db</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
             </div>
             <div id="l94"
-               class="code sev- "><tt><i>94</i>         <span class="k">if</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">askyesno</span><span class="p">(</span><span class="s2">&quot;Vous etes surs?&quot;</span><span class="p">,</span> <span class="s2">&quot;Supprimer enregistrement de &quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">name1</span><span class="o">+</span><span class="s2">&quot;?&quot;</span><span class="p">):</span></tt>
+               class="code sev- "><tt><i>94</i>         <span class="k">try</span><span class="p">:</span></tt>
             </div>
             <div id="l95"
-               class="code sev- "><tt><i>95</i>             <span class="c1"># delete the appointment</span></tt>
+               class="code sev- "><tt><i>95</i>             <span class="k">if</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">askyesno</span><span class="p">(</span><span class="s2">&quot;Vous etes surs?&quot;</span><span class="p">,</span> <span class="s2">&quot;Supprimer l&#39;enregistrement ?&quot;</span><span class="p">):</span></tt>
             </div>
             <div id="l96"
-               class="code sev- "><tt><i>96</i>             <span class="n">sql2</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM appointments WHERE name LIKE ?&quot;</span></tt>
+               class="code sev- "><tt><i>96</i>                 <span class="c1"># delete the appointment</span></tt>
             </div>
             <div id="l97"
-               class="code sev- "><tt><i>97</i>             <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql2</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">namenet</span><span class="o">.</span><span class="n">get</span><span class="p">(),))</span></tt>
+               class="code sev- "><tt><i>97</i>                 <span class="n">sql2</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM appointments WHERE name=?&quot;</span></tt>
             </div>
             <div id="l98"
-               class="code sev- "><tt><i>98</i>             <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>98</i>                 <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql2</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">namenet</span><span class="o">.</span><span class="n">get</span><span class="p">(),))</span></tt>
             </div>
             <div id="l99"
-               class="code sev- "><tt><i>99</i>             <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Reussie&quot;</span><span class="p">,</span> <span class="s2">&quot;Suppression reussie&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>99</i>                 <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></tt>
             </div>
             <div id="l100"
-               class="code sev- "><tt><i>100</i> &nbsp;</tt>
+               class="code sev- "><tt><i>100</i>                 <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Reussie&quot;</span><span class="p">,</span> <span class="s2">&quot;Suppression reussie&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l101"
-               class="code sev- "><tt><i>101</i> &nbsp;</tt>
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E722
+                     </span>
+                     Do not use bare 'except'</li>
+               
+               </ul><tt><i>101</i>         <span class="k">except</span><span class="p">:</span></tt>
             </div>
             <div id="l102"
+               class="code sev- "><tt><i>102</i>             <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showerror</span><span class="p">(</span><span class="s2">&quot;Erreur&quot;</span><span class="p">,</span> <span class="s2">&quot;La suppression a échoué&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i> &nbsp;</tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i> &nbsp;</tt>
+            </div>
+            <div id="l105"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -611,33 +629,33 @@
                      </span>
                      Block comment should start with '# '</li>
                
-               </ul><tt><i>102</i> <span class="c1">#creating the object</span></tt>
-            </div>
-            <div id="l103"
-               class="code sev- "><tt><i>103</i> <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span></tt>
-            </div>
-            <div id="l104"
-               class="code sev- "><tt><i>104</i> <span class="n">b</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></tt>
-            </div>
-            <div id="l105"
-               class="code sev- "><tt><i>105</i> <span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;640x620+100+50&quot;</span><span class="p">)</span></tt>
+               </ul><tt><i>105</i> <span class="c1">#creating the object</span></tt>
             </div>
             <div id="l106"
-               class="code sev- "><tt><i>106</i> <span class="n">root</span><span class="o">.</span><span class="n">resizable</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>106</i> <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span></tt>
             </div>
             <div id="l107"
-               class="code sev- "><tt><i>107</i> <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Changer rendez-vous&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>107</i> <span class="n">b</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></tt>
             </div>
             <div id="l108"
-               class="code sev- "><tt><i>108</i> <span class="n">root</span><span class="o">.</span><span class="n">iconphoto</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;resources/icon.png&#39;</span><span class="p">))</span></tt>
+               class="code sev- "><tt><i>108</i> <span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;640x620+100+50&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l109"
-               class="code sev- "><tt><i>109</i> &nbsp;</tt>
+               class="code sev- "><tt><i>109</i> <span class="n">root</span><span class="o">.</span><span class="n">resizable</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></tt>
             </div>
             <div id="l110"
-               class="code sev- "><tt><i>110</i> <span class="c1"># end the loop</span></tt>
+               class="code sev- "><tt><i>110</i> <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Changer rendez-vous&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l111"
+               class="code sev- "><tt><i>111</i> <span class="n">root</span><span class="o">.</span><span class="n">iconphoto</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;resources/icon.png&#39;</span><span class="p">))</span></tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i> &nbsp;</tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i> <span class="c1"># end the loop</span></tt>
+            </div>
+            <div id="l114"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -647,7 +665,7 @@
                      </span>
                      No newline at end of file</li>
                
-               </ul><tt><i>111</i> <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span></tt>
+               </ul><tt><i>114</i> <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span></tt>
             </div>
             
          </div>

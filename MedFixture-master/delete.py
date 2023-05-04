@@ -91,12 +91,15 @@ class App:
     
     
     def delete_db(self):
-        if tkinter.messagebox.askyesno("Vous etes surs?", "Supprimer enregistrement de "+self.name1+"?"):
-            # delete the appointment
-            sql2 = "DELETE FROM appointments WHERE name LIKE ?"
-            c.execute(sql2, (self.namenet.get(),))
-            conn.commit()
-            tkinter.messagebox.showinfo("Reussie", "Suppression reussie")
+        try:
+            if tkinter.messagebox.askyesno("Vous etes surs?", "Supprimer l'enregistrement ?"):
+                # delete the appointment
+                sql2 = "DELETE FROM appointments WHERE name=?"
+                c.execute(sql2, (self.namenet.get(),))
+                conn.commit()
+                tkinter.messagebox.showinfo("Reussie", "Suppression reussie")
+        except:
+            tkinter.messagebox.showerror("Erreur", "La suppression a échoué")
 
 
 #creating the object

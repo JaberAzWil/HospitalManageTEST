@@ -656,7 +656,7 @@
                class="code sev- "><tt><i>120</i>     <span class="c1"># function to call when the submit button is clicked</span></tt>
             </div>
             <div id="l121"
-               class="code sev- "><tt><i>121</i>     <span class="k">def</span> <span class="nf">add_appointment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span></tt>
+               class="code sev- "><tt><i>121</i>     <span class="k">def</span> <span class="nf">add_appointment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
             </div>
             <div id="l122"
                class="code sev- "><tt><i>122</i>         <span class="c1"># getting the user inputs</span></tt>
@@ -668,24 +668,30 @@
                class="code sev- "><tt><i>124</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">age_ent</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
             </div>
             <div id="l125"
-               class="code sev- "><tt><i>125</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gender_ent</span></tt>
+               class="code sev- "><tt><i>125</i>         <span class="c1"># self.val3 = self.gender_ent</span></tt>
             </div>
             <div id="l126"
-               class="code sev- "><tt><i>126</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val4</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">location_ent</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>126</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
             </div>
             <div id="l127"
-               class="code sev- "><tt><i>127</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val5</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_ent</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>127</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val4</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">location_ent</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
             </div>
             <div id="l128"
-               class="code sev- "><tt><i>128</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val6</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phone_ent</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>128</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val5</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_ent</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
             </div>
             <div id="l129"
-               class="code sev- "><tt><i>129</i> &nbsp;</tt>
+               class="code sev- "><tt><i>129</i>         <span class="bp">self</span><span class="o">.</span><span class="n">val6</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phone_ent</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></tt>
             </div>
             <div id="l130"
-               class="code sev- "><tt><i>130</i>         <span class="c1"># checking if the user input is empty</span></tt>
+               class="code sev- "><tt><i>130</i> &nbsp;</tt>
             </div>
             <div id="l131"
+               class="code sev- "><tt><i>131</i>         <span class="c1"># checking if the user input is empty</span></tt>
+            </div>
+            <div id="l132"
+               class="code sev- "><tt><i>132</i>         <span class="c1"># if self.val1 == &#39;&#39; or self.val2 == &#39;&#39; or self.val4 == &#39;&#39; or self.val5 == &#39;&#39; or self.val6 == &#39;&#39;:</span></tt>
+            </div>
+            <div id="l133"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -695,9 +701,9 @@
                      </span>
                      Line too long (122 > 119 characters)</li>
                
-               </ul><tt><i>131</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">val1</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val2</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val3</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val4</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val5</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val6</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span></tt>
+               </ul><tt><i>133</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">val1</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val2</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val3</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val4</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val5</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">val6</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span></tt>
             </div>
-            <div id="l132"
+            <div id="l134"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -707,15 +713,18 @@
                      </span>
                      Missing whitespace after ','</li>
                
-               </ul><tt><i>132</i>             <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showwarning</span><span class="p">(</span><span class="s2">&quot;Attention&quot;</span><span class="p">,</span><span class="s2">&quot;Veuillez remplir tous les détails&quot;</span><span class="p">)</span></tt>
-            </div>
-            <div id="l133"
-               class="code sev- "><tt><i>133</i>         <span class="k">else</span><span class="p">:</span></tt>
-            </div>
-            <div id="l134"
-               class="code sev- "><tt><i>134</i>             <span class="c1"># now we add to the database</span></tt>
+               </ul><tt><i>134</i>             <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showwarning</span><span class="p">(</span><span class="s2">&quot;Attention&quot;</span><span class="p">,</span><span class="s2">&quot;Veuillez remplir tous les détails&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l135"
+               class="code sev- "><tt><i>135</i>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Les champs doivent être remplis&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l136"
+               class="code sev- "><tt><i>136</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l137"
+               class="code sev- "><tt><i>137</i>             <span class="c1"># now we add to the database</span></tt>
+            </div>
+            <div id="l138"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -725,15 +734,21 @@
                      </span>
                      Line too long (124 > 119 characters)</li>
                
-               </ul><tt><i>135</i>             <span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO &#39;appointments&#39; (name, age, gender, location, scheduled_time, phone) VALUES(?, ?, ?, ?, ?, ?)&quot;</span></tt>
+               </ul><tt><i>138</i>             <span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO &#39;appointments&#39; (name, age, gender, location, scheduled_time, phone) VALUES(?, ?, ?, ?, ?, ?)&quot;</span></tt>
             </div>
-            <div id="l136"
-               class="code sev- "><tt><i>136</i>             <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val5</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val6</span><span class="p">))</span></tt>
+            <div id="l139"
+               class="code sev- "><tt><i>139</i>             <span class="c1"># sql = &quot;INSERT INTO &#39;appointments&#39; (name, age, location, scheduled_time, phone) VALUES(?, ?, ?, ?, ?)&quot;</span></tt>
             </div>
-            <div id="l137"
-               class="code sev- "><tt><i>137</i>             <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></tt>
+            <div id="l140"
+               class="code sev- "><tt><i>140</i>             <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val5</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val6</span><span class="p">))</span></tt>
             </div>
-            <div id="l138"
+            <div id="l141"
+               class="code sev- "><tt><i>141</i>             <span class="c1"># c.execute(sql, (self.val1, self.val2, self.val4, self.val5, self.val6))</span></tt>
+            </div>
+            <div id="l142"
+               class="code sev- "><tt><i>142</i>             <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></tt>
+            </div>
+            <div id="l143"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -743,32 +758,17 @@
                      </span>
                      Missing whitespace after ','</li>
                
-               </ul><tt><i>138</i>             <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Reussie&quot;</span><span class="p">,</span><span class="s2">&quot;Rendez-vous pour &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val1</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; a été créer&quot;</span><span class="p">)</span></tt>
-            </div>
-            <div id="l139"
-               class="code sev-2  le">
-               <ul class="violations">
-               
                   <li>
                      <span class="count sev-2">
-                        W293
+                        W291
                      </span>
-                     Blank line contains whitespace</li>
+                     Trailing whitespace</li>
                
-               </ul><tt><i>139</i>             </tt>
+               </ul><tt><i>143</i>             <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Reussie&quot;</span><span class="p">,</span><span class="s2">&quot;Rendez-vous pour &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val1</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; a été créer&quot;</span><span class="p">)</span>   </tt>
             </div>
-            <div id="l140"
-               class="code sev- "><tt><i>140</i> &nbsp;</tt>
-            </div>
-            <div id="l141"
+            <div id="l144"
                class="code sev-1  le">
                <ul class="violations">
-               
-                  <li>
-                     <span class="count sev-2">
-                        E303
-                     </span>
-                     Too many blank lines (2)</li>
                
                   <li>
                      <span class="count sev-1">
@@ -776,15 +776,15 @@
                      </span>
                      'END' may be undefined, or defined from star imports: Tkinter, tkinter</li>
                
-               </ul><tt><i>141</i>             <span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">END</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Rendez-vous pris pour &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; au &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val5</span><span class="p">))</span></tt>
+               </ul><tt><i>144</i>             <span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">END</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Rendez-vous pris pour &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; au &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val5</span><span class="p">))</span></tt>
             </div>
-            <div id="l142"
-               class="code sev- "><tt><i>142</i> &nbsp;</tt>
+            <div id="l145"
+               class="code sev- "><tt><i>145</i> &nbsp;</tt>
             </div>
-            <div id="l143"
-               class="code sev- "><tt><i>143</i> &nbsp;</tt>
+            <div id="l146"
+               class="code sev- "><tt><i>146</i> &nbsp;</tt>
             </div>
-            <div id="l144"
+            <div id="l147"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -794,63 +794,63 @@
                      </span>
                      Block comment should start with '# '</li>
                
-               </ul><tt><i>144</i> <span class="c1">#creating the object</span></tt>
-            </div>
-            <div id="l145"
-               class="code sev- "><tt><i>145</i> <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span></tt>
-            </div>
-            <div id="l146"
-               class="code sev- "><tt><i>146</i> <span class="n">b</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></tt>
-            </div>
-            <div id="l147"
-               class="code sev- "><tt><i>147</i> &nbsp;</tt>
+               </ul><tt><i>147</i> <span class="c1">#creating the object</span></tt>
             </div>
             <div id="l148"
-               class="code sev- "><tt><i>148</i> <span class="c1"># resolution of the window</span></tt>
+               class="code sev- "><tt><i>148</i> <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span></tt>
             </div>
             <div id="l149"
-               class="code sev- "><tt><i>149</i> <span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;1000x620+100+50&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>149</i> <span class="n">b</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></tt>
             </div>
             <div id="l150"
                class="code sev- "><tt><i>150</i> &nbsp;</tt>
             </div>
             <div id="l151"
-               class="code sev- "><tt><i>151</i> <span class="c1"># preventing the resize feature</span></tt>
+               class="code sev- "><tt><i>151</i> <span class="c1"># resolution of the window</span></tt>
             </div>
             <div id="l152"
-               class="code sev- "><tt><i>152</i> <span class="n">root</span><span class="o">.</span><span class="n">resizable</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>152</i> <span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;1000x620+100+50&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l153"
                class="code sev- "><tt><i>153</i> &nbsp;</tt>
             </div>
             <div id="l154"
-               class="code sev- "><tt><i>154</i> <span class="c1"># title of the window</span></tt>
+               class="code sev- "><tt><i>154</i> <span class="c1"># preventing the resize feature</span></tt>
             </div>
             <div id="l155"
-               class="code sev- "><tt><i>155</i> <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ajouter nouveau rendez-vous&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>155</i> <span class="n">root</span><span class="o">.</span><span class="n">resizable</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></tt>
             </div>
             <div id="l156"
                class="code sev- "><tt><i>156</i> &nbsp;</tt>
             </div>
             <div id="l157"
-               class="code sev- "><tt><i>157</i> <span class="c1"># icon of the application</span></tt>
+               class="code sev- "><tt><i>157</i> <span class="c1"># title of the window</span></tt>
             </div>
             <div id="l158"
-               class="code sev- "><tt><i>158</i> <span class="n">root</span><span class="o">.</span><span class="n">iconphoto</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;resources/icon.png&#39;</span><span class="p">))</span></tt>
+               class="code sev- "><tt><i>158</i> <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ajouter nouveau rendez-vous&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l159"
                class="code sev- "><tt><i>159</i> &nbsp;</tt>
             </div>
             <div id="l160"
-               class="code sev- "><tt><i>160</i> <span class="n">root</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;&lt;Return&gt;&#39;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">add_appointment</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>160</i> <span class="c1"># icon of the application</span></tt>
             </div>
             <div id="l161"
-               class="code sev- "><tt><i>161</i> &nbsp;</tt>
+               class="code sev- "><tt><i>161</i> <span class="n">root</span><span class="o">.</span><span class="n">iconphoto</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;resources/icon.png&#39;</span><span class="p">))</span></tt>
             </div>
             <div id="l162"
-               class="code sev- "><tt><i>162</i> <span class="c1"># end the loop</span></tt>
+               class="code sev- "><tt><i>162</i> &nbsp;</tt>
             </div>
             <div id="l163"
+               class="code sev- "><tt><i>163</i> <span class="n">root</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;&lt;Return&gt;&#39;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">add_appointment</span><span class="p">)</span></tt>
+            </div>
+            <div id="l164"
+               class="code sev- "><tt><i>164</i> &nbsp;</tt>
+            </div>
+            <div id="l165"
+               class="code sev- "><tt><i>165</i> <span class="c1"># end the loop</span></tt>
+            </div>
+            <div id="l166"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -860,7 +860,7 @@
                      </span>
                      No newline at end of file</li>
                
-               </ul><tt><i>163</i> <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span></tt>
+               </ul><tt><i>166</i> <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span></tt>
             </div>
             
          </div>

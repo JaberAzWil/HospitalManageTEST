@@ -85,6 +85,7 @@ class App:
                 self.drawWin()
             else:
                 tkinter.messagebox.showerror("Connexion echouer", "Login ou mot de passe invalide! SVP réessayer encore")
+                raise ValueError('Connexion echouer')
     
     # function for guest login
     def guestLogin(self):

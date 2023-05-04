@@ -118,26 +118,29 @@ class App:
         self.box.insert(END, "Total de rendez-vous :  " + str(self.final_id))
 
     # function to call when the submit button is clicked
-    def add_appointment(self, event):
+    def add_appointment(self):
         # getting the user inputs
         self.val1 = self.name_ent.get()
         self.val2 = self.age_ent.get()
-        self.val3 = self.gender_ent
+        # self.val3 = self.gender_ent
+        self.val3 = self.var.get()
         self.val4 = self.location_ent.get()
         self.val5 = self.time_ent.get()
         self.val6 = self.phone_ent.get()
 
         # checking if the user input is empty
+        # if self.val1 == '' or self.val2 == '' or self.val4 == '' or self.val5 == '' or self.val6 == '':
         if self.val1 == '' or self.val2 == '' or self.val3 == '' or self.val4 == '' or self.val5 == '' or self.val6 == '':
             tkinter.messagebox.showwarning("Attention","Veuillez remplir tous les détails")
+            raise ValueError('Les champs doivent être remplis')
         else:
             # now we add to the database
             sql = "INSERT INTO 'appointments' (name, age, gender, location, scheduled_time, phone) VALUES(?, ?, ?, ?, ?, ?)"
+            # sql = "INSERT INTO 'appointments' (name, age, location, scheduled_time, phone) VALUES(?, ?, ?, ?, ?)"
             c.execute(sql, (self.val1, self.val2, self.val3, self.val4, self.val5, self.val6))
+            # c.execute(sql, (self.val1, self.val2, self.val4, self.val5, self.val6))
             conn.commit()
-            tkinter.messagebox.showinfo("Reussie","Rendez-vous pour "+str(self.val1)+" a été créer")
-            
-
+            tkinter.messagebox.showinfo("Reussie","Rendez-vous pour "+str(self.val1)+" a été créer")   
             self.box.insert(END, '\nRendez-vous pris pour ' + str(self.val1) + ' au ' + str(self.val5))
 
 
