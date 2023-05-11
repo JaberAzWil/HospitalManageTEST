@@ -1,11 +1,11 @@
 import sqlite3
+from tkinter import Tk
 import pytest
-from tkinter import *   
-import tkinter as tk
 from display import App
 
 conn = sqlite3.connect('database.db')
-c = conn.cursor() 
+c = conn.cursor()
+
 
 @pytest.fixture
 def app():
@@ -14,6 +14,7 @@ def app():
     app = App(master=root)
     yield app
     root.mainloop()
+
 
 def test_search_db(app):
 

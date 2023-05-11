@@ -1,25 +1,28 @@
-try:
-    
-    from tkinter import *    
-except ImportError:
-    
-    from tkinter import *   
-    import tkinter as tk
+from tkinter import Label, Entry, Button, END
+import tkinter as tk
 import sqlite3
 import tkinter.messagebox
 
 conn = sqlite3.connect('database.db')
 c = conn.cursor()
 
+
 class App:
     def __init__(self, master):
         self.master = master
         # heading label
-        self.heading = Label(master, text="Changer rendez-vous",  fg='black', font=('arial 18'))
+        self.heading = Label(
+            master,
+            text="Changer rendez-vous",
+            fg='black',
+            font=('arial 18'))
         self.heading.place(x=180, y=40)
 
-        # search criteria -->name 
-        self.name = Label(master, text="Entrer nom du patient", font=('arial 12'))
+        # search criteria -->name
+        self.name = Label(
+            master,
+            text="Entrer nom du patient",
+            font=('arial 12'))
         self.name.place(x=70, y=100)
 
         # entry for  the name
@@ -27,15 +30,21 @@ class App:
         self.namenet.place(x=300, y=100)
 
         # search button
-        self.search = Button(master, text="Rechercher", width=12, height=1, bg='steelblue', command=self.search_db)
+        self.search = Button(
+            master,
+            text="Rechercher",
+            width=12,
+            height=1,
+            bg='steelblue',
+            command=self.search_db)
         self.search.place(x=230, y=150)
-    
-    
+
     # function to search
+
     def search_db(self):
         self.input = self.namenet.get()
 
-        # execute sql 
+        # execute sql
         sql = "SELECT * FROM appointments WHERE name LIKE ?"
         self.res = c.execute(sql, (self.input,))
         for self.row in self.res:
@@ -45,9 +54,12 @@ class App:
             self.location = self.row[4]
             self.time = self.row[6]
             self.phone = self.row[5]
-        
+
         # creating the update form
-        self.uname = Label(self.master, text="Nom du patient", font=('arial 12'))
+        self.uname = Label(
+            self.master,
+            text="Nom du patient",
+            font=('arial 12'))
         self.uname.place(x=70, y=220)
 
         self.uage = Label(self.master, text="Age", font=('arial 12'))
@@ -59,13 +71,19 @@ class App:
         self.ulocation = Label(self.master, text="Localité", font=('arial 12'))
         self.ulocation.place(x=70, y=340)
 
-        self.utime = Label(self.master, text="Date de rendez-vous", font=('arial 12'))
+        self.utime = Label(
+            self.master,
+            text="Date de rendez-vous",
+            font=('arial 12'))
         self.utime.place(x=70, y=380)
 
-        self.uphone = Label(self.master, text="Numero de telephone", font=('arial 12'))
+        self.uphone = Label(
+            self.master,
+            text="Numero de telephone",
+            font=('arial 12'))
         self.uphone.place(x=70, y=420)
 
-        # entries for each labels==========================================================
+        # entries for each labels==============================================
         # ===================filling the search result in the entry box to update
         self.ent1 = Entry(self.master, width=30)
         self.ent1.place(x=300, y=220)
@@ -77,8 +95,8 @@ class App:
 
         # gender list
         GenderList = ["Homme",
-        "Femme",
-        "Transgenre"]
+                      "Femme",
+                      "Transgenre"]
 
         # Option menu
         self.var = tk.StringVar()
@@ -95,7 +113,7 @@ class App:
                     # print(GenderList[i])
                     self.gender = GenderList[i]
                     break
-        
+
         self.var.trace("w", callback)
 
         self.ent4 = Entry(self.master, width=30)
@@ -111,26 +129,41 @@ class App:
         self.ent6.insert(END, str(self.phone))
 
         # button to execute update
-        self.update = Button(self.master, text="Executer", width=20, height=2, bg='lightblue', command=self.update_db)
+        self.update = Button(
+            self.master,
+            text="Executer",
+            width=20,
+            height=2,
+            bg='lightblue',
+            command=self.update_db)
         self.update.place(x=200, y=480)
-    
-    
+
     def update_db(self):
         # declaring the variables to update
-        self.var1 = self.ent1.get()  #updated name
-        self.var2 = self.ent2.get()  #updated age
-        self.var3 = self.gender      #updated gender
-        self.var4 = self.ent4.get()  #updated location
-        self.var5 = self.ent5.get()  #updated phone
-        self.var6 = self.ent6.get()  #updated time
+        self.var1 = self.ent1.get()  # updated name
+        self.var2 = self.ent2.get()  # updated age
+        self.var3 = self.gender  # updated gender
+        self.var4 = self.ent4.get()  # updated location
+        self.var5 = self.ent5.get()  # updated phone
+        self.var6 = self.ent6.get()  # updated time
 
-        query = "UPDATE appointments SET name=?, age=?, gender=?, location=?, phone=?, scheduled_time=? WHERE name LIKE ?"
-        c.execute(query, (self.var1, self.var2, self.var3, self.var4, self.var5, self.var6, self.namenet.get(),))
+        query = """UPDATE appointments SET name=?, age=?, gender=?, location=?, phone=?, scheduled_time=?
+                WHERE name LIKE ?"""
+        c.execute(
+            query,
+            (self.var1,
+             self.var2,
+             self.var3,
+             self.var4,
+             self.var5,
+             self.var6,
+             self.namenet.get(),
+             ))
         conn.commit()
         tkinter.messagebox.showinfo("mis à jour", "mis à jour reussie.")
 
 
-#creating the object
+# creating the object
 root = tk.Tk()
 b = App(root)
 root.geometry("640x620+100+50")

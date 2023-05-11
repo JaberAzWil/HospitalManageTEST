@@ -1,10 +1,6 @@
-try:
-    
-    from Tkinter import *   
-except ImportError:
-    # for Python3
-    from tkinter import *   
-    import tkinter as tk
+# for Python3
+import tkinter as tk
+from tkinter import Label, Entry, Button, LEFT, END, RIGHT, Frame, Text
 import sqlite3
 import tkinter.messagebox
 
@@ -17,46 +13,83 @@ c = conn.cursor()
 ids = []
 
 # tkinter window
+
+
 class App:
     def __init__(self, master):
         self.master = master
 
         # creating the format in master
         self.left = Frame(master, width=600, height=720, bg='lightblue')
-        self.left.pack(side = LEFT)
+        self.left.pack(side=LEFT)
 
         self.right = Frame(master, width=400, height=720, bg='steelblue')
-        self.right.pack(side = RIGHT)
+        self.right.pack(side=RIGHT)
 
         # heading
-        self.heading = Label(self.left, text="Entrer detail", font=('arial 18'), fg='black', bg='lightblue')
+        self.heading = Label(
+            self.left,
+            text="Entrer detail",
+            font=('arial 18'),
+            fg='black',
+            bg='lightblue')
         self.heading.place(x=220, y=50)
 
         # patient's name
-        self.name = Label(self.left, text="Nom du patient", font=('arial 12'), fg='black', bg='lightblue')
+        self.name = Label(
+            self.left,
+            text="Nom du patient",
+            font=('arial 12'),
+            fg='black',
+            bg='lightblue')
         self.name.place(x=65, y=100)
 
         # age
-        self.age = Label(self.left, text="Age", font=('arial 12'), fg='black', bg='lightblue')
+        self.age = Label(
+            self.left,
+            text="Age",
+            font=('arial 12'),
+            fg='black',
+            bg='lightblue')
         self.age.place(x=65, y=140)
 
         # gender
-        self.gender = Label(self.left, text="Genre", font=('arial 12'), fg='black', bg='lightblue')
+        self.gender = Label(
+            self.left,
+            text="Genre",
+            font=('arial 12'),
+            fg='black',
+            bg='lightblue')
         self.gender.place(x=65, y=180)
 
         # location
-        self.location = Label(self.left, text="Localité", font=('arial 12'), fg='black', bg='lightblue')
+        self.location = Label(
+            self.left,
+            text="Localité",
+            font=('arial 12'),
+            fg='black',
+            bg='lightblue')
         self.location.place(x=65, y=220)
 
         # appointment time
-        self.time = Label(self.left, text="Date de rendez-vous", font=('arial 12'), fg='black', bg='lightblue')
+        self.time = Label(
+            self.left,
+            text="Date de rendez-vous",
+            font=('arial 12'),
+            fg='black',
+            bg='lightblue')
         self.time.place(x=65, y=260)
 
         # phone
-        self.phone = Label(self.left, text="Numero de téléphone", font=('arial 12'), fg='black', bg='lightblue')
+        self.phone = Label(
+            self.left,
+            text="Numero de téléphone",
+            font=('arial 12'),
+            fg='black',
+            bg='lightblue')
         self.phone.place(x=65, y=300)
 
-        # Enteries for all labels==============================================================
+        # Enteries for all labels==============================================
         self.name_ent = Entry(self.left, width=30)
         self.name_ent.place(x=275, y=100)
 
@@ -65,8 +98,8 @@ class App:
 
         # gender list
         GenderList = ["Homme",
-        "Femme",
-        "Transgenre"]
+                      "Femme",
+                      "Transgenre"]
 
         # Option menu
         self.var = tk.StringVar()
@@ -82,7 +115,7 @@ class App:
                 if GenderList[i] == self.var.get():
                     self.gender_ent = GenderList[i]
                     break
-        
+
         self.var.trace("w", callback)
 
         self.location_ent = Entry(self.left, width=30)
@@ -95,7 +128,13 @@ class App:
         self.phone_ent.place(x=275, y=300)
 
         # button to perform a command
-        self.submit = Button(self.left, text="Ajouter rendez-vous", width=20, height=2, bg='steelblue', command=self.add_appointment)
+        self.submit = Button(
+            self.left,
+            text="Ajouter rendez-vous",
+            width=20,
+            height=2,
+            bg='steelblue',
+            command=self.add_appointment)
         self.submit.place(x=190, y=350)
 
         # getting the number of appointments fixed to view in the log
@@ -107,10 +146,15 @@ class App:
 
         # ordering the ids
         self.new = sorted(ids)
-        self.final_id = self.new[len(ids)-1]
+        self.final_id = self.new[len(ids) - 1]
 
         # displaying the logs in right frame
-        self.logs = Label(self.right, text="Rendez-vous enregistrer", font=('arial 20 bold'), fg='white', bg='steelblue')
+        self.logs = Label(
+            self.right,
+            text="Rendez-vous enregistrer",
+            font=('arial 20 bold'),
+            fg='white',
+            bg='steelblue')
         self.logs.place(x=20, y=10)
 
         self.box = Text(self.right, font=('courier 11'), width=40, height=30)
@@ -129,22 +173,35 @@ class App:
         self.val6 = self.phone_ent.get()
 
         # checking if the user input is empty
-        # if self.val1 == '' or self.val2 == '' or self.val4 == '' or self.val5 == '' or self.val6 == '':
-        if self.val1 == '' or self.val2 == '' or self.val3 == '' or self.val4 == '' or self.val5 == '' or self.val6 == '':
-            tkinter.messagebox.showwarning("Attention","Veuillez remplir tous les détails")
+        # if self.val1 == '' or self.val2 == '' or self.val4 == '' or self.val5
+        # == '' or self.val6 == '':
+        if (self.val1 == '' or self.val2 == '' or self.val3 == '' or self.val4 == ''
+                or self.val5 == '' or self.val6 == ''):
+            tkinter.messagebox.showwarning(
+                "Attention", "Veuillez remplir tous les détails")
             raise ValueError('Les champs doivent être remplis')
         else:
             # now we add to the database
-            sql = "INSERT INTO 'appointments' (name, age, gender, location, scheduled_time, phone) VALUES(?, ?, ?, ?, ?, ?)"
+            sql = """INSERT INTO 'appointments' (name, age, gender, location, scheduled_time, phone)
+                  VALUES(?, ?, ?, ?, ?, ?)"""
             # sql = "INSERT INTO 'appointments' (name, age, location, scheduled_time, phone) VALUES(?, ?, ?, ?, ?)"
-            c.execute(sql, (self.val1, self.val2, self.val3, self.val4, self.val5, self.val6))
+            c.execute(
+                sql,
+                (self.val1,
+                 self.val2,
+                 self.val3,
+                 self.val4,
+                 self.val5,
+                 self.val6))
             # c.execute(sql, (self.val1, self.val2, self.val4, self.val5, self.val6))
             conn.commit()
-            tkinter.messagebox.showinfo("Reussie","Rendez-vous pour "+str(self.val1)+" a été créer")   
-            self.box.insert(END, '\nRendez-vous pris pour ' + str(self.val1) + ' au ' + str(self.val5))
+            tkinter.messagebox.showinfo(
+                "Reussie", "Rendez-vous pour " + str(self.val1) + " a été créer")
+            self.box.insert(END, '\nRendez-vous pris pour ' +
+                            str(self.val1) + ' au ' + str(self.val5))
 
 
-#creating the object
+# creating the object
 root = tk.Tk()
 b = App(root)
 

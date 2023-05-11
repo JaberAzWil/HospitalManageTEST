@@ -6,6 +6,7 @@ from tkinter import Tk
 #     with app.test_client() as client:
 #         yield client
 
+
 @pytest.fixture
 def app(App):
     # Initialisation de l'application

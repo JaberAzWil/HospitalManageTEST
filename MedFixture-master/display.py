@@ -1,25 +1,28 @@
-try:
-    from Tkinter import *   
-except ImportError:
-    
-    from tkinter import *   
-    import tkinter as tk
+from tkinter import Label, Entry, Button
+import tkinter as Tk
 import sqlite3
-import pyttsx3
 
-#connection to database
+# connection to database
 conn = sqlite3.connect('database.db')
 c = conn.cursor()
+
 
 class App:
     def __init__(self, master):
         self.master = master
         # heading label
-        self.heading = Label(master, text="Voir les rendez-vous",  fg='black', font=('arial 18'))
+        self.heading = Label(
+            master,
+            text="Voir les rendez-vous",
+            fg='black',
+            font=('arial 18'))
         self.heading.place(x=180, y=40)
 
-        # search criteria -->name 
-        self.name = Label(master, text="Entrer le nom du patient", font=('arial 12'))
+        # search criteria -->name
+        self.name = Label(
+            master,
+            text="Entrer le nom du patient",
+            font=('arial 12'))
         self.name.place(x=70, y=100)
 
         # entry for  the name
@@ -27,15 +30,21 @@ class App:
         self.namenet.place(x=300, y=100)
 
         # search button
-        self.search = Button(master, text="Recherche", width=12, height=1, bg='steelblue', command=self.search_db)
+        self.search = Button(
+            master,
+            text="Recherche",
+            width=12,
+            height=1,
+            bg='steelblue',
+            command=self.search_db)
         self.search.place(x=230, y=150)
-    
-    
+
     # function to search
+
     def search_db(self):
         self.input = self.namenet.get()
 
-        # execute sql 
+        # execute sql
         sql = "SELECT * FROM appointments WHERE name LIKE ?"
         self.res = c.execute(sql, (self.input,))
         for self.row in self.res:
@@ -45,9 +54,12 @@ class App:
             self.location = self.row[4]
             self.time = self.row[6]
             self.phone = self.row[5]
-        
+
         # creating the update form
-        self.uname = Label(self.master, text="Nom du patient", font=('arial 12'))
+        self.uname = Label(
+            self.master,
+            text="Nom du patient",
+            font=('arial 12'))
         self.uname.place(x=70, y=220)
 
         self.uage = Label(self.master, text="Age", font=('arial 12'))
@@ -59,13 +71,19 @@ class App:
         self.ulocation = Label(self.master, text="Localité", font=('arial 12'))
         self.ulocation.place(x=70, y=340)
 
-        self.utime = Label(self.master, text="Date de rendez-vous", font=('arial 12'))
+        self.utime = Label(
+            self.master,
+            text="Date de rendez-vous",
+            font=('arial 12'))
         self.utime.place(x=70, y=380)
 
-        self.uphone = Label(self.master, text="Numero de téléphone", font=('arial 12'))
+        self.uphone = Label(
+            self.master,
+            text="Numero de téléphone",
+            font=('arial 12'))
         self.uphone.place(x=70, y=420)
 
-        # entries for each labels==========================================================
+        # entries for each labels==============================================
         # ===================filling the search result in the entry box to update
         self.ent1 = Label(self.master, text=self.name1, font=('arial 12'))
         self.ent1.place(x=300, y=220)
@@ -91,5 +109,5 @@ b = App(root)
 root.geometry("640x620+100+50")
 root.resizable(False, False)
 root.title("Voir rendez-vous")
-root.iconphoto(False, tk.PhotoImage(file='resources/icon.png'))
+root.iconphoto(False, Tk.PhotoImage(file='resources/icon.png'))
 root.mainloop()
